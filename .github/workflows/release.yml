@@ -10,6 +10,7 @@ on:
       - next-major
       - beta
       - alpha
+      - maya/slackbot
 env:
   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
@@ -51,4 +52,4 @@ jobs:
         with:
           status: complete
           config: .github/workflows/slack-breaking-changes.yml
-          if: contains(payload.commits.*.message, 'breaking changes')
+          if: contains(payload.commits.*.message, 'breaking change')
