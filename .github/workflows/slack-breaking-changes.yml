@@ -1,8 +1,8 @@
-pretext: ":warning: {{ actor }} released breaking changes to SDS on the {{ branch }} branch! :warning:"
+pretext: ":warning: {{ actor }} released breaking changes to SDS on the {{ branch }} branch! Library updates newer than version {{ github.event.release.tag_name }} may cause your application to break! :warning:"
 
 text: |
   {{#if payload.commits}}
-  *Commitsz*
+  *Commits*
   {{#each payload.commits}}
   <{{this.url}}|`{{truncate this.id 8}}`> - {{this.message}}
   {{/each}}
