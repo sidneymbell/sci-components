@@ -52,4 +52,4 @@ jobs:
         with:
           status: complete
           config: .github/workflows/slack-breaking-changes.yml
-          if: contains(payload.commits.*.message, 'breaking change')
+        if: contains(payload.commits.*.message, 'breaking change')
