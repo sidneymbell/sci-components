@@ -49,7 +49,8 @@ jobs:
         run: npx semantic-release
       - name: Post breaking changes to a Slack channel
         uses: act10ns/slack@v1
-        with:
-          status: complete
-          config: .github/workflows/slack-breaking-changes.yml
-        if: contains(github.event.payload.head_commit.message, 'breaking changes')
+        test: test
+        # with:
+        #   status: complete
+        #   config: .github/workflows/slack-breaking-changes.yml
+        # if: contains(github.event.payload.head_commit.message, 'breaking changes')
