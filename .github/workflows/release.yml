@@ -49,7 +49,7 @@ jobs:
       #   run: npx semantic-release
       - name: Post breaking changes to a Slack channel
         uses: act10ns/slack@v1
-        test: test
+        test: 'test'
         # with:
         #   status: complete
         #   config: .github/workflows/slack-breaking-changes.yml
