@@ -2,7 +2,6 @@ pretext: ":warning: {{ actor }} released breaking changes to SDS on the {{ branc
 
 text: |
   {{json payload.head_commit}}
-  {{json github.event}}
   {{#if payload.commits}}
   *Commits*
   {{#each payload.commits}}
