@@ -1,6 +1,7 @@
 pretext: ":warning: {{ actor }} released breaking changes to SDS on the {{ branch }} branch! Library updates newer than version {{ github.event.release.tag_name }} may cause your application to break! :warning:"
 
 text: |
+  {{json payload.head_commit}}
   {{#if payload.commits}}
   *Commits*
   {{#each payload.commits}}
